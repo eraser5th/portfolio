@@ -6,6 +6,17 @@ export const App = () => {
     <div className={app}>
       <img src={iconSrc} alt="me" className={icon} />
       <h1>eraser5th</h1>
+      <Basics />
+      <Carrer />
+      <Skilles />
+      <Hobbies />
+    </div>
+  )
+}
+
+const Basics = () => {
+  return (
+    <>
       <h2>プロフィール</h2>
       <p>
         本名は加藤豪（たけし）。会津大学学部２年、Zliサークル所属。
@@ -15,6 +26,13 @@ export const App = () => {
         趣味はゲームとアニメとVtuberと環境構築(Neovim, Wezterm, SketchyBar,
         etc)。
       </p>
+    </>
+  )
+}
+
+const Carrer = () => {
+  return (
+    <>
       <h2>経歴</h2>
       <h3>インターン・アルバイト経験</h3>
       <ul>
@@ -30,6 +48,13 @@ export const App = () => {
         <li>わたしたちのウェルビーイングのためのハッカソン2022：参加</li>
         <li>Open Hack U 2021 Online Vol.3：参加</li>
       </ul>
+    </>
+  )
+}
+
+const Skilles = () => {
+  return (
+    <>
       <h2>スキル</h2>
       <h3>言語など</h3>
       <ul>
@@ -73,6 +98,13 @@ export const App = () => {
           <a href="https://atcoder.jp/users/ERASER5th">AtCoder</a>
         </li>
       </ul>
+    </>
+  )
+}
+
+const Hobbies = () => {
+  return (
+    <>
       <h2>趣味・好きなもの</h2>
       <h3>ゲーム</h3>
       <ul>
@@ -136,6 +168,6 @@ export const App = () => {
         <li>猫百合イッサ</li>
         <li>社築</li>
       </ul>
-    </div>
+    </>
   )
 }
