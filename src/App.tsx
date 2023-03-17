@@ -76,12 +76,14 @@ const Skilles = () => {
       <ul>
         <li>React・Next</li>
         <li>Vue・Nuxt</li>
-        <li>CSSフレームワーク</li>
-        <ul>
-          <li>Bootstrap</li>
-          <li>tailwind css</li>
-          <li>Chakura UI</li>
-        </ul>
+        <li>
+          CSSフレームワーク
+          <ul>
+            <li>Bootstrap</li>
+            <li>tailwind css</li>
+            <li>Chakura UI</li>
+          </ul>
+        </li>
         <li>Apollo Client</li>
         <li>Vite</li>
       </ul>
@@ -119,23 +121,29 @@ const Hobbies = () => {
         <li>ギルティクラウン</li>
         <li>ばらかもん</li>
         <li>Citrus</li>
-        <li>TypeMoon作品</li>
-        <ul>
-          <li>空の境界</li>
-          <li>Fateシリーズ</li>
-          <li>月姫</li>
-        </ul>
-        <li>高橋留美子作品</li>
-        <ul>
-          <li>うる星やつら</li>
-          <li>めぞん一刻</li>
-          <li>人魚の森</li>
-        </ul>
-        <li>ジブリ作品</li>
-        <ul>
-          <li>風の谷のナウシカ</li>
-          <li>もののけ姫</li>
-        </ul>
+        <li>
+          TypeMoon作品
+          <ul>
+            <li>空の境界</li>
+            <li>Fateシリーズ</li>
+            <li>月姫</li>
+          </ul>
+        </li>
+        <li>
+          高橋留美子作品
+          <ul>
+            <li>うる星やつら</li>
+            <li>めぞん一刻</li>
+            <li>人魚の森</li>
+          </ul>
+        </li>
+        <li>
+          ジブリ作品
+          <ul>
+            <li>風の谷のナウシカ</li>
+            <li>もののけ姫</li>
+          </ul>
+        </li>
       </ul>
       <h3>音楽</h3>
       <ul>
