@@ -14,6 +14,21 @@ export const App = () => {
         趣味はゲームとアニメとVtuberと環境構築(Neovim, Wezterm, SketchyBar,
         etc)。
       </p>
+      <h2>経歴</h2>
+      <h3>インターン・アルバイト経験</h3>
+      <ul>
+        <li>2022/1 ~ 現在：Appify Technologiesにてアルバイト・インターン</li>
+      </ul>
+      <h3>ハッカソン</h3>
+      <ul>
+        <li>第２回100Program：参加</li>
+        <li>
+          わたしたちのウェルビーイングのためのハッカソン2021：富士通
+          つながる豊かさ賞受賞
+        </li>
+        <li>わたしたちのウェルビーイングのためのハッカソン2022：参加</li>
+        <li>Open Hack U 2021 Online Vol.3：参加</li>
+      </ul>
       <h2>スキル</h2>
       <h3>言語など</h3>
       <ul>
@@ -35,8 +50,12 @@ export const App = () => {
       <ul>
         <li>React・Next</li>
         <li>Vue・Nuxt</li>
-        <li>Bootstrap</li>
-        <li>tailwind</li>
+        <li>CSSフレームワーク</li>
+        <ul>
+          <li>Bootstrap</li>
+          <li>tailwind css</li>
+          <li>Chakura UI</li>
+        </ul>
         <li>Apollo Client</li>
         <li>Vite</li>
       </ul>
@@ -45,21 +64,13 @@ export const App = () => {
         <li>Git・GitHub</li>
         <li>AWS Lambda</li>
         <li>Google App Engine</li>
+        <li>Figma</li>
       </ul>
-      <h2>経歴</h2>
-      <h3>インターン・アルバイト経験</h3>
+      <h3>競技プログラミング</h3>
       <ul>
-        <li>2022/1 ~ 現在：Appify Technologiesにてアルバイト・インターン</li>
-      </ul>
-      <h3>ハッカソン</h3>
-      <ul>
-        <li>第２回100Program：参加</li>
         <li>
-          わたしたちのウェルビーイングのためのハッカソン2021：富士通
-          つながる豊かさ賞受賞
+          <a href="https://atcoder.jp/users/ERASER5th">AtCoder</a>
         </li>
-        <li>わたしたちのウェルビーイングのためのハッカソン2022：参加</li>
-        <li>Open Hack U 2021 Online Vol.3：参加</li>
       </ul>
       <h2>趣味・好きなもの</h2>
       <h3>ゲーム</h3>
@@ -119,6 +130,7 @@ export const App = () => {
         <li>姫森ルーナ</li>
         <li>風真いろは</li>
         <li>天野ピカミィ</li>
+        <li>猫百合イッサ</li>
         <li>社築</li>
       </ul>
     </div>
