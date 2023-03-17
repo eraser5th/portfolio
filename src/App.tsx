@@ -1,10 +1,10 @@
-import { app } from "./App.css"
-import icon from "./assets/icon.png"
+import { app, icon } from "./App.css"
+import iconSrc from "./assets/icon.png"
 
 export const App = () => {
   return (
     <div className={app}>
-      <img src={icon} alt="me" className={icon} />
+      <img src={iconSrc} alt="me" className={icon} />
       <h1>eraser5th</h1>
       <h2>プロフィール</h2>
       <p>
