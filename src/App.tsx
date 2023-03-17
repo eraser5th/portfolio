@@ -1,9 +1,10 @@
+import { app } from "./App.css"
 import icon from "./assets/icon.png"
 
 export const App = () => {
   return (
-    <div className="App">
-      <img src={icon} alt="me" className="icon" />
+    <div className={app}>
+      <img src={icon} alt="me" className={icon} />
       <h1>eraser5th</h1>
       <h2>プロフィール</h2>
       <p>
