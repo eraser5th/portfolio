@@ -85,6 +85,8 @@ export const App = () => {
         <li>ダンジョンに出会いを求めるのは間違っているだろうか</li>
         <li>週末なにしてますか？忙しいですか？救ってもらっていいですか？</li>
         <li>ギルティクラウン</li>
+        <li>ばらかもん</li>
+        <li>Citrus</li>
         <li>TypeMoon作品</li>
         <ul>
           <li>空の境界</li>
