@@ -113,6 +113,46 @@ const Hobbies = () => {
         <li>Splatoon</li>
         <li>Monster Hunter</li>
       </ul>
+      <BookAnimeCommics />
+      <h3>音楽</h3>
+      <ul>
+        <li>EGOIST</li>
+        <li>削除</li>
+        <li>SEKAI NO OWARI</li>
+      </ul>
+      <h3>環境構築・UNIX Porn</h3>
+      <ul>
+        <li>Neovim</li>
+        <li>SketchyBar</li>
+        <li>Wezterm</li>
+      </ul>
+      <h3>Vtuber</h3>
+      <ul>
+        <li>猫又おかゆ</li>
+        <li>常闇トワ</li>
+        <li>獅白ぼたん</li>
+        <li>Hakos Bealz</li>
+        <li>Calliope Mori</li>
+        <li>Ceres Fauna</li>
+        <li>大空スバル</li>
+        <li>大神ミオ</li>
+        <li>雪花ラミィ</li>
+        <li>ロボ子さん</li>
+        <li>兎田ぺこら</li>
+        <li>姫森ルーナ</li>
+        <li>風真いろは</li>
+        <li>桃鈴ねね</li>
+        <li>天野ピカミィ</li>
+        <li>猫百合イッサ</li>
+        <li>社築</li>
+      </ul>
+    </>
+  )
+}
+
+const BookAnimeCommics = () => {
+  return (
+    <>
       <h3>小説・アニメ・漫画など</h3>
       <ul>
         <li>Re:ゼロから始める異世界生活</li>
@@ -151,38 +191,6 @@ const Hobbies = () => {
             <li>地球(テラ)へ...</li>
           </ul>
         </li>
-      </ul>
-      <h3>音楽</h3>
-      <ul>
-        <li>EGOIST</li>
-        <li>削除</li>
-        <li>SEKAI NO OWARI</li>
-      </ul>
-      <h3>環境構築・UNIX Porn</h3>
-      <ul>
-        <li>Neovim</li>
-        <li>SketchyBar</li>
-        <li>Wezterm</li>
-      </ul>
-      <h3>Vtuber</h3>
-      <ul>
-        <li>猫又おかゆ</li>
-        <li>常闇トワ</li>
-        <li>獅白ぼたん</li>
-        <li>Hakos Bealz</li>
-        <li>Calliope Mori</li>
-        <li>Ceres Fauna</li>
-        <li>大空スバル</li>
-        <li>大神ミオ</li>
-        <li>雪花ラミィ</li>
-        <li>ロボ子さん</li>
-        <li>兎田ぺこら</li>
-        <li>姫森ルーナ</li>
-        <li>風真いろは</li>
-        <li>桃鈴ねね</li>
-        <li>天野ピカミィ</li>
-        <li>猫百合イッサ</li>
-        <li>社築</li>
       </ul>
     </>
   )
