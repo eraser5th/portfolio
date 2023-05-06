@@ -71,6 +71,8 @@ const Skilles = () => {
         <li>WebSocket</li>
         <li>Coq（定理証明）</li>
         <li>Prisma（ORM）</li>
+        <li>Rust</li>
+        <li>Haskell(勉強中)</li>
       </ul>
       <h3>フレームワーク・ライブラリなど</h3>
       <ul>
@@ -161,6 +163,11 @@ const BookAnimeCommics = () => {
         <li>ギルティクラウン</li>
         <li>ばらかもん</li>
         <li>Citrus</li>
+        <li>ヴァイオレット・エヴァーガーデン</li>
+        <li>物語シリーズ</li>
+        <li>刀語</li>
+        <li>PSYCHO-PASS</li>
+        <li>メイドインアビス</li>
         <li>
           TypeMoon作品
           <ul>
