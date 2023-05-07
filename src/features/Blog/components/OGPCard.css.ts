@@ -22,9 +22,10 @@ export const image = style({
 
 export const title = style({
   color: "white",
-  fontSize: "24px"
+  fontSize: "1.25rem"
 })
 
 export const description = style({
   color: "white",
+  fontSize: "1rem"
 })

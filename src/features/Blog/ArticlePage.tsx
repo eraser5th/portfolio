@@ -1,3 +1,4 @@
+import { Page } from "../../components/Page"
 import { Markdown } from "./components/Markdown"
 
 type Article = {
@@ -15,5 +16,5 @@ export const ArticlePage: React.FC = () => {
     content: content,
   }
 
-  return <Markdown>{article.content}</Markdown>
+  return <Page><Markdown>{article.content}</Markdown></Page>
 }
