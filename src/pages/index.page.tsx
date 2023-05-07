@@ -6,7 +6,13 @@ const AboutPage = () => {
   return (
     <Page>
       <div className={app}>
-        <Image src="/icon.png" width={100} height={100} alt="me" className={icon} />
+        <Image
+          src="/icon.png"
+          width={100}
+          height={100}
+          alt="me"
+          className={icon}
+        />
         <h1>eraser5th</h1>
         <Basics />
         <Carrer />
@@ -206,4 +212,4 @@ const BookAnimeCommics = () => {
   )
 }
 
-export default AboutPage;
+export default AboutPage
