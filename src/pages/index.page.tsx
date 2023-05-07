@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { app, icon } from "./index.css"
+import "../styles/global.css"
 
 const AboutPage = () => {
   return (
