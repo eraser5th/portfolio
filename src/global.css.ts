@@ -16,10 +16,10 @@ globalStyle("#root", {
 })
 
 globalStyle("html", {
-  '@media': {
-    '(width <= 640px)': {
-      fontSize: "15px"
-    }
+  "@media": {
+    "(width <= 640px)": {
+      fontSize: "15px",
+    },
   },
 })
 

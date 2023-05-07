@@ -41,7 +41,11 @@ const Anchor: React.FC<{
   }, [href])
 
   if (ogp && children[0] === "@ogp") {
-    return <a href={href}><OGPCard ogp={ogp} /></a>
+    return (
+      <a href={href}>
+        <OGPCard ogp={ogp} />
+      </a>
+    )
   }
 
   return <a href={href}>{children}</a>

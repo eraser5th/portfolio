@@ -16,5 +16,9 @@ export const ArticlePage: React.FC = () => {
     content: content,
   }
 
-  return <Page><Markdown>{article.content}</Markdown></Page>
+  return (
+    <Page>
+      <Markdown>{article.content}</Markdown>
+    </Page>
+  )
 }

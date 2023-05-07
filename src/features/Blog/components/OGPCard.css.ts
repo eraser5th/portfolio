@@ -1,4 +1,4 @@
-import { style } from "@vanilla-extract/css";
+import { style } from "@vanilla-extract/css"
 
 export const ogpCard = style({
   width: "100%",
@@ -11,21 +11,21 @@ export const ogpCard = style({
 
 export const info = style({
   display: "flex",
-  flexDirection: "column"
+  flexDirection: "column",
 })
 
 export const image = style({
-  width: '100px',
-  height: '100px',
-  objectFit: 'cover',
+  width: "100px",
+  height: "100px",
+  objectFit: "cover",
 })
 
 export const title = style({
   color: "white",
-  fontSize: "1.25rem"
+  fontSize: "1.25rem",
 })
 
 export const description = style({
   color: "white",
-  fontSize: "1rem"
+  fontSize: "1rem",
 })
