@@ -1,13 +1,7 @@
 import { globalStyle } from "@vanilla-extract/css"
 
 globalStyle("#root", {
-  maxWidth: "1280px",
   margin: "0 auto",
-  padding: "2rem",
-  textAlign: "start",
-})
-
-globalStyle(":root", {
   fontFamily: "Inter, system-ui, Avenir, Helvetica, Arial, sans-serif",
   lineHeight: 1.5,
   fontWeight: 400,
@@ -19,6 +13,14 @@ globalStyle(":root", {
   WebkitFontSmoothing: "antialiased",
   MozOsxFontSmoothing: "grayscale",
   WebkitTextSizeAdjust: "100%",
+})
+
+globalStyle("html", {
+  "@media": {
+    "(width <= 640px)": {
+      fontSize: "15px",
+    },
+  },
 })
 
 globalStyle("a", {
@@ -33,10 +35,6 @@ globalStyle("a:hover", {
 
 globalStyle("body", {
   margin: 0,
-  display: "flex",
-  placeItems: "center",
-  minWidth: "320px",
-  minHeight: "100vh",
 })
 
 globalStyle("button", {
