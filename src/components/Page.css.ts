@@ -17,8 +17,3 @@ export const page = style({
   minHeight: "100vh",
   textAlign: "start",
 })
-
-export const pageInner = style({
-  display: "flex",
-  flexDirection: "column",
-})

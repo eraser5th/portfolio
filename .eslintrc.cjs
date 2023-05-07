@@ -23,8 +23,10 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint", "import"],
   rules: {
-    "import/no-default-export": ["error"],
-    "import/prefer-default-export": 0,
+    "import/no-default-export": ["off"],
+    "import/prefer-default-export": [
+      "off"
+    ],
     "import/extensions": [
       "error",
       {
