@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { NavBar } from "../../components/NavBar"
 import { Page } from "../../components/Page"
-import { MyGetServerSideProps } from "../../types/MyGetServerSideProps"
+import { MyGetStaticProps } from "../../types/MyGetStaticProps"
 import { ArticleMeta, getAllArticleMeta } from "./articles/lib/posts"
 import { articleCard } from "./index.page.css"
 
@@ -9,7 +9,7 @@ type BlogPageProps = {
   articles: ArticleMeta[]
 }
 
-export const getServerSideProps: MyGetServerSideProps<BlogPageProps> = () => {
+export const getStaticProps: MyGetStaticProps<object, BlogPageProps> = () => {
   return {
     props: { articles: getAllArticleMeta() },
   }
