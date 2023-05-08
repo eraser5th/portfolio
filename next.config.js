@@ -5,7 +5,7 @@ const nextConfig = {
   transpilePackages: [
     "react-syntax-highlighter"
   ],
-  pageExtensions: ["page.tsx"]
+  pageExtensions: ["page.tsx"],
 };
 
 const withVanillaExtract = createVanillaExtractPlugin();
