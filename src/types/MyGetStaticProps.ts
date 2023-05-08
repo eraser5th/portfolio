@@ -5,4 +5,4 @@ export type MyGetStaticProps<
   PARAMS extends Record<string, any>,
   // eslint-disable-next-line
   PROPS extends Record<string, any>
-> = (arg: { params: PARAMS }) => Promise<GetStaticPropsResult<PROPS>>
+> = (arg: { params: PARAMS }) => Promise<GetStaticPropsResult<PROPS>> | GetStaticPropsResult<PROPS>
