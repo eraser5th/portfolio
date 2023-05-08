@@ -2,9 +2,9 @@ import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight"
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
-import { getOgpFromExternalWebsite, OGP } from "../lib/getOgp"
-import { useEffect, useState } from "react"
 import { OGPCard } from "./OGPCard"
+import { useRecoilValue } from "recoil"
+import { ogpListState } from "../store/ogpListState"
 
 export const Markdown: React.FC<{
   children: string
@@ -28,26 +28,10 @@ const Anchor: React.FC<{
   children: React.ReactNode & React.ReactNode[]
   href?: string
 }> = ({ children, href }) => {
-  const [ogp, setOgp] = useState<OGP>({})
+  const ogpList = useRecoilValue(ogpListState)
+  const ogp = ogpList.find((ogp) => ogp.url === href)
 
-  useEffect(() => {
-    const fetcher = async () => {
-      if (href) {
-        setOgp(await getOgpFromExternalWebsite(href))
-      }
-    }
-    fetcher().catch(() => console.log("error in Anchor"))
-  }, [href])
-
-  if (ogp && children[0] === "@ogp") {
-    return (
-      <a href={href}>
-        <OGPCard ogp={ogp} />
-      </a>
-    )
-  }
-
-  return <a href={href}>{children}</a>
+  return <a href={href}>{ogp ? <OGPCard ogp={ogp} /> : children}</a>
 }
 
 const Code: React.FC<{

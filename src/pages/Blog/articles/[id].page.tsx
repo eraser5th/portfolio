@@ -5,6 +5,8 @@ import { Markdown } from "./components/Markdown"
 import { getOgpFromExternalWebsite, OGP } from "./lib/getOgp"
 import { getAllArticleIds, getArticleById } from "./lib/posts"
 import { MyGetStaticProps } from "../../../types/MyGetStaticProps"
+import { useRecoilState } from "recoil"
+import { ogpListState } from "./store/ogpListState"
 
 type Article = {
   content: string
@@ -47,7 +49,12 @@ export const getStaticPaths: GetStaticPaths<PostPageParams> = () => {
   }
 }
 
-const ArticlePage: React.FC<PostPageProps> = ({ article, ogpList }) => {
+const ArticlePage: React.FC<PostPageProps> = ({
+  article,
+  ogpList: _ogpList,
+}) => {
+  const [ogpList, setOGPList] = useRecoilState(ogpListState)
+  setOGPList(_ogpList)
   console.log(ogpList)
 
   return (
