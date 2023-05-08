@@ -1,7 +1,6 @@
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm"
 import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight"
-
 import { atomOneDark } from "react-syntax-highlighter/dist/esm/styles/hljs"
 import { getOgpFromExternalWebsite, OGP } from "../lib/getOgp"
 import { useEffect, useState } from "react"

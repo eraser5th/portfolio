@@ -1,3 +1,5 @@
+import { JSDOM } from "jsdom"
+
 type OGPProperty =
   | "og:image"
   | "og:title"
@@ -29,8 +31,8 @@ export const getOgpFromExternalWebsite = async (url: string): Promise<OGP> => {
   const res = await fetch(url)
   const text = await res.text()
 
-  const dom = new DOMParser().parseFromString(text, "text/html")
-  const metaElements = [...dom.head.querySelectorAll("meta")]
+  const dom = new JSDOM(text)
+  const metaElements = [...dom.window.document.querySelectorAll("meta")]
 
   const ogpAndContentList = metaElements
     .filter((e) => e.hasAttribute("property"))
