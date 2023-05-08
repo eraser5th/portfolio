@@ -1,4 +1,5 @@
 import Link from "next/link"
+import { NavBar } from "../../components/NavBar"
 import { Page } from "../../components/Page"
 import { MyGetServerSideProps } from "../../types/MyGetServerSideProps"
 import { ArticleMeta, getAllArticleMeta } from "./articles/lib/posts"
@@ -30,6 +31,7 @@ const ArticleCard: React.FC<{
 const BlogPage: React.FC<BlogPageProps> = ({ articles }) => {
   return (
     <Page>
+      <NavBar />
       {articles.map((article) => (
         <ArticleCard key={article.id} article={article} />
       ))}

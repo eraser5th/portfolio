@@ -7,6 +7,7 @@ import { getAllArticleIds, getArticleById } from "./lib/posts"
 import { MyGetStaticProps } from "../../../types/MyGetStaticProps"
 import { useRecoilState } from "recoil"
 import { ogpListState } from "./store/ogpListState"
+import { NavBar } from "../../../components/NavBar"
 
 type Article = {
   content: string
@@ -59,6 +60,7 @@ const ArticlePage: React.FC<PostPageProps> = ({
 
   return (
     <Page>
+      <NavBar />
       <Markdown>{article.content}</Markdown>
     </Page>
   )
