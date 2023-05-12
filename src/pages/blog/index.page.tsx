@@ -3,7 +3,6 @@ import { NavBar } from "../../components/NavBar"
 import { Page } from "../../components/Page"
 import { MyGetStaticProps } from "../../types/MyGetStaticProps"
 import { ArticleMeta, getAllArticleMeta } from "./articles/lib/posts"
-import { articleCard } from "./index.page.css"
 
 type BlogPageProps = {
   articles: ArticleMeta[]
@@ -20,11 +19,11 @@ const ArticleCard: React.FC<{
 }> = ({ article }) => {
   const href = `/blog/articles/${article.id}`
   return (
-    <Link key={article.id} href={href}>
-      <div className={articleCard}>
+    <li>
+      <Link key={article.id} href={href}>
         {article.title}
-      </div>
-    </Link>
+      </Link>
+    </li>
   )
 }
 
@@ -32,9 +31,11 @@ const BlogPage: React.FC<BlogPageProps> = ({ articles }) => {
   return (
     <Page>
       <NavBar />
+      <ul>
       {articles.map((article) => (
         <ArticleCard key={article.id} article={article} />
       ))}
+      </ul>
     </Page>
   )
 }
