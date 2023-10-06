@@ -36,6 +36,7 @@ export const getOgpFromExternalWebsite = async (url: string): Promise<OGP> => {
 
   const ogpAndContentList = metaElements
     .filter((e) => e.hasAttribute("property"))
+    .filter((e) => e.hasAttribute("content"))
     .map(getPropertyAndContent)
     .filter(isOgp)
 
@@ -58,7 +59,7 @@ const getPropertyAndContent = (element: HTMLMetaElement) => {
   }
 
   const content = element.getAttribute("content")
-  if (!content) {
+  if (content !== "" && !content) {
     throw new Error("[getPropertyAndContent]: cannot get content")
   }
 
