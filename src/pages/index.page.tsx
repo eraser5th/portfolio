@@ -17,7 +17,7 @@ const AboutPage = () => {
         />
         <h1>eraser5th</h1>
         <Basics />
-        <Carrer />
+        <Career />
         <Skilles />
         <Hobbies />
       </div>
@@ -41,13 +41,19 @@ const Basics = () => {
   )
 }
 
-const Carrer = () => {
+const Career = () => {
   return (
     <>
       <h2>経歴</h2>
       <h3>インターン・アルバイト経験</h3>
       <ul>
-        <li>2022/1 ~ 現在：Appify Technologiesにてアルバイト・インターン</li>
+        <li>
+          2022/1 ~ 現在：Appify
+          Technologiesにてアルバイト・インターン(Webフロント)
+        </li>
+        <li>
+          2023/8/14 ~ 9/29：合同会社DMM サマーインターンに参加（Webフロント）
+        </li>
       </ul>
       <h3>ハッカソン</h3>
       <ul>
