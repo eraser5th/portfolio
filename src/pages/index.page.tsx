@@ -17,7 +17,7 @@ const AboutPage = () => {
         />
         <h1>eraser5th</h1>
         <Basics />
-        <Carrer />
+        <Career />
         <Skilles />
         <Hobbies />
       </div>
@@ -41,7 +41,7 @@ const Basics = () => {
   )
 }
 
-const Carrer = () => {
+const Career = () => {
   return (
     <>
       <h2>経歴</h2>
