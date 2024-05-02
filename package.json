@@ -12,7 +12,8 @@
     "lint:check": "next lint && eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "next lint --fix && eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
-    "format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
+    "format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "prepare": "panda codegen"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.10.0",

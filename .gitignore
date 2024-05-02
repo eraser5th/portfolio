@@ -24,3 +24,7 @@ dist-ssr
 *.sw?
 
 .next
+
+## Panda
+styled-system
+styled-system-studio
