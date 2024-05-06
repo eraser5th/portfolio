@@ -1,12 +1,10 @@
 import Image from "next/image"
-import { NavBar } from "../components/NavBar"
 import { Page } from "../components/Page"
 import { app, icon } from "./index.css"
 
 const AboutPage = () => {
   return (
     <Page>
-      <NavBar />
       <div className={app}>
         <Image
           src="/icon.png"
