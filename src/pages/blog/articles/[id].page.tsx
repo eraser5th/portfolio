@@ -54,17 +54,14 @@ const ArticlePage: React.FC<PostPageProps> = ({
   article,
   ogpList: _ogpList,
 }) => {
-  const [ogpList, setOGPList] = useRecoilState(ogpListState)
+  const [, setOGPList] = useRecoilState(ogpListState)
   setOGPList(_ogpList)
-  console.log(ogpList)
 
   return (
     <Page>
-      <NavBar />
       <Markdown>{article.content}</Markdown>
     </Page>
   )
-  // return null
 }
 
 export default ArticlePage
