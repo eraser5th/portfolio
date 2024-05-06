@@ -10,15 +10,6 @@ h6 {
   line-height: 1.75;
 }
 
-*+h1,
-*+h2,
-*+h3,
-*+h4,
-*+h5,
-*+h6 {
-  margin-bottom: 100px;
-}
-
 h1 {
   font-size: 2.5rem;
   border-bottom: solid 2px white;
@@ -41,6 +32,7 @@ p {
 }
 
 ul {
+  margin-left: 2rem;
   margin-bottom: 24px;
 }
 
@@ -49,6 +41,9 @@ li {
 }
 
 li>ul {
-  padding-left: 2rem;
   margin-bottom: 0px;
+}
+
+li>ul>li {
+  list-style: circle inside;
 }
