@@ -7,7 +7,6 @@ import { getAllArticleIds, getArticleById } from "./lib/posts"
 import { MyGetStaticProps } from "../../../types/MyGetStaticProps"
 import { useRecoilState } from "recoil"
 import { ogpListState } from "./store/ogpListState"
-import { NavBar } from "../../../components/NavBar"
 
 type Article = {
   content: string

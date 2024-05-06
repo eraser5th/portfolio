@@ -9,4 +9,6 @@ export default defineConfig({
   },
   outdir: "styled-system",
   strictTokens: true,
+  syntax: "object-literal",
+  jsxFramework: "react",
 })
