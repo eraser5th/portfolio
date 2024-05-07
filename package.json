@@ -12,7 +12,8 @@
     "lint:check": "next lint && eslint 'src/**/*.{js,jsx,ts,tsx}'",
     "lint:fix": "next lint --fix && eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx}'",
-    "format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'"
+    "format:fix": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "prepare": "panda codegen"
   },
   "dependencies": {
     "@vanilla-extract/css": "^1.10.0",
@@ -34,6 +35,7 @@
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
+    "@pandacss/dev": "^0.38.0",
     "@types/jsdom": "^21.1.1",
     "@types/node": "^20.1.0",
     "@types/react": "^18.0.27",

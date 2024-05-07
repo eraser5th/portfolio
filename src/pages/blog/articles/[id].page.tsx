@@ -1,4 +1,5 @@
 import type { GetStaticPaths } from "next"
+import { useRouter } from "next/router"
 import { Page } from "../../../components/Page"
 import { getOgpLinksFromMarkdown } from "./lib/getOgpLinksFromMarkdown"
 import { Markdown } from "./components/Markdown"
@@ -7,7 +8,6 @@ import { getAllArticleIds, getArticleById } from "./lib/posts"
 import { MyGetStaticProps } from "../../../types/MyGetStaticProps"
 import { useRecoilState } from "recoil"
 import { ogpListState } from "./store/ogpListState"
-import { NavBar } from "../../../components/NavBar"
 
 type Article = {
   content: string
@@ -46,7 +46,7 @@ export const getStaticPaths: GetStaticPaths<PostPageParams> = () => {
   const ids = getAllArticleIds()
   return {
     paths: ids.map((id) => ({ params: { id } })),
-    fallback: false,
+    fallback: true,
   }
 }
 
@@ -54,17 +54,19 @@ const ArticlePage: React.FC<PostPageProps> = ({
   article,
   ogpList: _ogpList,
 }) => {
-  const [ogpList, setOGPList] = useRecoilState(ogpListState)
+  const router = useRouter()
+  const [, setOGPList] = useRecoilState(ogpListState)
   setOGPList(_ogpList)
-  console.log(ogpList)
+
+  if (router.isFallback) {
+    return <Page>Now loading...</Page>
+  }
 
   return (
     <Page>
-      <NavBar />
       <Markdown>{article.content}</Markdown>
     </Page>
   )
-  // return null
 }
 
 export default ArticlePage

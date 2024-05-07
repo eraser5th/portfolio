@@ -1,55 +1,22 @@
 import { JSDOM } from "jsdom"
 
-type OGPProperty =
-  | "og:image"
-  | "og:title"
-  | "og:description"
-  | "og:url"
-  | "og:type"
-  | "og:site_name"
+const OGPPropertyList = [
+  "og:image",
+  "og:title",
+  "og:description",
+  "og:url",
+  "og:type",
+  "og:site_name",
+] as const
 
-export type OGPPropertyShortHand =
-  | "image"
-  | "title"
-  | "description"
-  | "url"
-  | "type"
-  | "site_name"
+type OGPProperty = (typeof OGPPropertyList)[number]
+
+export type OGPPropertyShortHand = OGPProperty extends `og:${infer U}`
+  ? U
+  : never
 
 const toShortHand = (s: OGPProperty): OGPPropertyShortHand => {
   return s.split("og:")[1] as OGPPropertyShortHand
-}
-
-type OGPPropertyAndContent<P extends OGPProperty | OGPPropertyShortHand> = {
-  property: P
-  content: string
-}
-
-export type OGP = Partial<Record<OGPPropertyShortHand, string>>
-
-export const getOgpFromExternalWebsite = async (url: string): Promise<OGP> => {
-  const res = await fetch(url)
-  const text = await res.text()
-
-  const dom = new JSDOM(text)
-  const metaElements = [...dom.window.document.querySelectorAll("meta")]
-
-  const ogpAndContentList = metaElements
-    .filter((e) => e.hasAttribute("property"))
-    .filter((e) => e.hasAttribute("content"))
-    .map(getPropertyAndContent)
-    .filter(isOgp)
-
-  const shorthandedOGPAndContentList = ogpAndContentList.map(
-    ({ property, content }) => ({ property: toShortHand(property), content })
-  )
-
-  const ogp: OGP = {}
-  shorthandedOGPAndContentList.forEach(({ property, content }) => {
-    ogp[property] = content
-  })
-
-  return ogp
 }
 
 const getPropertyAndContent = (element: HTMLMetaElement) => {
@@ -66,18 +33,44 @@ const getPropertyAndContent = (element: HTMLMetaElement) => {
   return { content, property }
 }
 
+type OGPPropertyAndContent = {
+  property: OGPProperty
+  content: string
+}
+
 const isOgp = (x: {
   property: string | null
   content: string | null
-}): x is OGPPropertyAndContent<OGPProperty> => {
+}): x is OGPPropertyAndContent => {
   if (x.property === null || x.content === null) return false
 
-  if (x.property === "og:image") return true
-  if (x.property === "og:title") return true
-  if (x.property === "og:description") return true
-  if (x.property === "og:url") return true
-  if (x.property === "og:type") return true
-  if (x.property === "og:site_name") return true
+  return (
+    OGPPropertyList
+      // Type convert
+      .map((s) => s + "")
+      .includes(x.property)
+  )
+}
 
-  return false
+export type OGP = Partial<Record<OGPPropertyShortHand, string>>
+
+export const getOgpFromExternalWebsite = async (url: string): Promise<OGP> => {
+  const res = await fetch(url)
+  const text = await res.text()
+
+  const dom = new JSDOM(text)
+  const metaElements = [...dom.window.document.querySelectorAll("meta")]
+
+  return metaElements
+    .filter((e) => e.hasAttribute("property"))
+    .filter((e) => e.hasAttribute("content"))
+    .map(getPropertyAndContent)
+    .filter(isOgp)
+    .reduce(
+      (ass, { property, content }) => ({
+        [toShortHand(property)]: content,
+        ...ass,
+      }),
+      {} as OGP
+    )
 }

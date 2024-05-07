@@ -3,7 +3,7 @@ import { css } from "../../styled-system/css"
 
 export const NavBar: React.FC = () => {
   return (
-    <header className={header}>
+    <header className={headerStyle}>
       <Link href={"/"} className={navItem}>
         About
       </Link>

@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { NavBar } from "../../components/NavBar"
 import { Page } from "../../components/Page"
 import { MyGetStaticProps } from "../../types/MyGetStaticProps"
 import { ArticleMeta, getAllArticleMeta } from "./articles/lib/posts"
@@ -19,22 +18,21 @@ const ArticleCard: React.FC<{
 }> = ({ article }) => {
   const href = `/blog/articles/${article.id}`
   return (
-    <li>
-      <Link key={article.id} href={href}>
-        {article.title}
-      </Link>
-    </li>
+    <Link key={article.id} href={href}>
+      {article.title}
+    </Link>
   )
 }
 
 const BlogPage: React.FC<BlogPageProps> = ({ articles }) => {
   return (
     <Page>
-      <NavBar />
       <ul>
-      {articles.map((article) => (
-        <ArticleCard key={article.id} article={article} />
-      ))}
+        {articles.map((article) => (
+          <li key={article.id}>
+            <ArticleCard article={article} />
+          </li>
+        ))}
       </ul>
     </Page>
   )
