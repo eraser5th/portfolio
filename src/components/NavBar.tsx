@@ -10,6 +10,9 @@ export const NavBar: React.FC = () => {
       <Link href={"/blog"} className={navItem}>
         Blog
       </Link>
+      <Link href={"/contacts"} className={navItem}>
+        Contacts
+      </Link>
     </header>
   )
 }
@@ -26,4 +29,7 @@ const header = css({
 const navItem = css({
   fontSize: "3xl",
   color: "white",
+  _hover: {
+    color: "blue.500",
+  },
 })
