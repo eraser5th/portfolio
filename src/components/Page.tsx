@@ -23,7 +23,7 @@ const main = css({
   ],
   display: "flex",
   flexDir: "row",
-  gap: "4",
+  gap: "8",
   alignItems: "start",
   py: "20",
   px: "4",
@@ -38,7 +38,7 @@ const article = css({
 
 const navigator = css({
   position: "sticky",
-  top: "40",
+  top: "56",
   borderStyle: "solid",
   borderWidth: "1",
   borderRadius: "lg",
