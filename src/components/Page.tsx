@@ -18,8 +18,8 @@ const main = css({
     "full",
     "screen.narrow",
     "screen.middle",
-    "screen.middle",
     "screen.wide",
+    "screen.extra-wide",
   ],
   display: "flex",
   flexDir: "row",
@@ -33,7 +33,7 @@ const main = css({
 })
 
 const article = css({
-  width: ["full", "full", "full", "full", "5xl"],
+  width: ["full", "full", "full", "5xl", "5xl"],
 })
 
 const navigator = css({
@@ -43,6 +43,6 @@ const navigator = css({
   borderWidth: "1",
   borderRadius: "lg",
   py: "4",
-  visibility: ["hidden", undefined, undefined, undefined, "visible"],
-  width: ["0", "0", "0", "0", "lg"],
+  visibility: ["hidden", undefined, undefined, "visible", "visible"],
+  width: ["0", "0", "0", "lg", "lg"],
 })

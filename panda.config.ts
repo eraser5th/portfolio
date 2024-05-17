@@ -2,7 +2,8 @@ import { defineConfig, Tokens } from "@pandacss/dev"
 
 const tokens: Tokens = {
   sizes: {
-    "screen.wide": { value: "1080px" },
+    "screen.extra-wide": { value: "1080px" },
+    "screen.wide": { value: "960px" },
     "screen.middle": { value: "720px" },
     "screen.narrow": { value: "620px" },
   },
