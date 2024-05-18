@@ -42,7 +42,7 @@ const navigator = css({
   borderStyle: "solid",
   borderWidth: "1",
   borderRadius: "lg",
-  py: "4",
+  p: "4",
   visibility: ["hidden", undefined, undefined, "visible", "visible"],
   width: ["0", "0", "0", "lg", "lg"],
 })

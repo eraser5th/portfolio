@@ -25,19 +25,24 @@ export const TableOfContent: React.FC = () => {
     )
   }, [])
 
+  useEffect(() => {}, [])
+
   return (
     <div>
       <ul
         className={css({
           m: "0",
           marginStart: "4",
-          "& > li": {
-            listStyle: "none",
-          },
         })}
       >
         {headings.map((h) => (
-          <li key={h.text}>
+          <li
+            key={h.text}
+            className={css({
+              ms: h.level === 2 ? "0" : "4",
+              listStyle: h.level === 2 ? "disc" : "circle",
+            })}
+          >
             <Link
               href={`#${h.id}`}
               className={css({
