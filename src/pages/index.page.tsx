@@ -1,9 +1,10 @@
 import Image from "next/image"
 import { Page } from "../components/Page"
+import { TableOfContent } from "../components/TableOfContent"
 
 const AboutPage = () => {
   return (
-    <Page>
+    <Page sideNav={<TableOfContent />}>
       <Image src="/icon.png" width={120} height={120} alt="me" />
       <h1>eraser5th</h1>
       <Basics />
